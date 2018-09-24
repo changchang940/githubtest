@@ -12,6 +12,8 @@ nuCOLORREF	b_ReCOLORREF;
 
 GDI_API nuPVOID LibGDI_InitModule(nuPVOID lpVoidIn)
 {
+	//log
+	printf("LibGDI_InitModule init begin\n");
 	b_UseingGDI=nuFALSE;
 	g_pCvsMgrZK = new CCanvasMgrZK();
 	if( !g_pCvsMgrZK )
@@ -61,6 +63,8 @@ GDI_API nuPVOID LibGDI_InitModule(nuPVOID lpVoidIn)
 	CGdiBaseZK::s_apiGdi.GDI_LoadUIPng = LibGDI_LoadUIPng;
 	CGdiBaseZK::s_apiGdi.GDI_CleanUIPng = LibGDI_CleanUIPng;
 	CGdiBaseZK::s_apiGdi.GDI_ShowStartUpBmp = LibGDI_ShowStartUpbmp;
+	//log
+	printf("LibGDI_InitModule success\n");
 	return &CGdiBaseZK::s_apiGdi;
 }
 GDI_API nuVOID LibGDI_FreeModule()
