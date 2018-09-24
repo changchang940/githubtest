@@ -69,6 +69,8 @@ GDI_API nuPVOID LibGDI_InitModule(nuPVOID lpVoidIn)
 }
 GDI_API nuVOID LibGDI_FreeModule()
 {
+	//log
+	printf("LibGDI_FreeModule \n");
 	if( g_pCvsMgrZK )
 	{
 		delete g_pCvsMgrZK;
